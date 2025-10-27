@@ -105,7 +105,7 @@ The **ANN model** outperformed other algorithms in terms of **accuracy and gener
 - Integrate **Word2Vec / BERT embeddings** for more contextual understanding.  
 - Build a **Streamlit web app** for real-time job post verification.  
 - Add **explainability (LIME, SHAP)** to make the model decisions interpretable.  
-- Explore **deep transformers (BERT, RoBERTa)** for improved text analysis.
+- Explore **deep transformers (BERT, RoBERTa)** for improved text analysis. 
 
 ---
 
