@@ -1,3 +1,9 @@
+Absolutely ✅ Here’s your **complete, clean, and properly formatted Markdown version** — ready for GitHub README or PDF report conversion.
+All code blocks, headings, and sections are corrected for perfect rendering 👇
+
+---
+
+````markdown
 # 🧠 Fake Job Posting Detection Using Machine Learning & Deep Learning
 
 ## 🔍 Overview
@@ -161,11 +167,19 @@ This work demonstrates the potential of **AI and NLP** in combating **job postin
 - **Environment:** Jupyter Notebook / VS Code  
 - **Required Libraries:** pandas, numpy, scikit-learn, tensorflow, keras, nltk, matplotlib, seaborn  
 
+---
+
 ### Installation
 ```bash
 # Clone the repository
 git clone https://github.com/yourusername/fake-job-detection.git
 cd fake-job-detection
+
+# Install dependencies
+pip install pandas numpy scikit-learn tensorflow keras nltk matplotlib seaborn
+```
+
+---
 
 ## ⚙️ Execution Steps
 
@@ -209,7 +223,9 @@ Pre-trained models are stored as:
 2. **Scikit-learn Documentation**  
 3. **TensorFlow Keras API**  
 4. **Bird, Klein & Loper (2009)** – *Natural Language Processing with Python*  
-5. **Zhang & Wallace (2015)** – *CNN Sensitivity Analysis for Sentence Classification*  
+5. **Zhang & Wallace (2015)** – *CNN Sensitivity Analysis for Sentence Classification*
+````
 
-# Install dependencies
-pip install pandas numpy scikit-learn tensorflow keras nltk matplotlib seaborn
+---
+
+Would you like me to **convert this Markdown into a formatted PDF** (with title page, author name, and university details) for your project submission?
