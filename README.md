@@ -1,6 +1,3 @@
----
-
-````markdown
 # 🧠 Fake Job Posting Detection Using Machine Learning & Deep Learning
 
 ## 🔍 Overview
@@ -113,18 +110,17 @@ A **Flask web application** is also developed for real-time detection of fake jo
 
 ## 📈 Visualizations
 
-- **Confusion Matrices:** ANN has the lowest false positives
-<img width="481" height="391" alt="image" src="https://github.com/user-attachments/assets/5861aed7-9e17-4021-b1f9-a0561f6a402e" />
-<img width="479" height="381" alt="image" src="https://github.com/user-attachments/assets/8d12e3e3-167a-4c00-b936-e892a2b32907" />
-<img width="504" height="366" alt="image" src="https://github.com/user-attachments/assets/017c1549-9d0a-4231-b083-7e42afbaed3d" />
-<img width="448" height="362" alt="image" src="https://github.com/user-attachments/assets/c88f3e0b-3288-423a-bdd2-9708229d8024" />
+- **Confusion Matrices:** ANN has the lowest false positives  
+![Confusion Matrix 1](https://github.com/user-attachments/assets/5861aed7-9e17-4021-b1f9-a0561f6a402e)  
+![Confusion Matrix 2](https://github.com/user-attachments/assets/8d12e3e3-167a-4c00-b936-e892a2b32907)  
+![Confusion Matrix 3](https://github.com/user-attachments/assets/017c1549-9d0a-4231-b083-7e42afbaed3d)  
+![Confusion Matrix 4](https://github.com/user-attachments/assets/c88f3e0b-3288-423a-bdd2-9708229d8024)
 
-- **ROC Curves:** ANN achieved AUC > 0.98 on both datasets
-<img width="879" height="332" alt="image" src="https://github.com/user-attachments/assets/c2072ddc-0ad7-4ba3-a5e4-0a197e6f6ee3" />
+- **ROC Curves:** ANN achieved AUC > 0.98 on both datasets  
+![ROC Curves](https://github.com/user-attachments/assets/c2072ddc-0ad7-4ba3-a5e4-0a197e6f6ee3)
 
-- **Performance Comparison:** ANN outperformed other models across all metrics
-<img width="592" height="353" alt="image" src="https://github.com/user-attachments/assets/3c46262c-a807-4b68-9673-b1042b3a99d8" />
-
+- **Performance Comparison:** ANN outperformed other models across all metrics  
+![Performance Comparison](https://github.com/user-attachments/assets/3c46262c-a807-4b68-9673-b1042b3a99d8)
 
 ---
 
@@ -173,8 +169,6 @@ This work demonstrates the potential of **AI and NLP** in combating **job postin
 - **Environment:** Jupyter Notebook / VS Code  
 - **Required Libraries:** pandas, numpy, scikit-learn, tensorflow, keras, nltk, matplotlib, seaborn  
 
----
-
 ### Installation
 ```bash
 # Clone the repository
@@ -190,6 +184,7 @@ pip install pandas numpy scikit-learn tensorflow keras nltk matplotlib seaborn
 ## ⚙️ Execution Steps
 
 ### **1. Data Preparation**
+
 ```python
 # Download datasets from Kaggle and place them in the project directory
 # Files: fake_job_postings.csv and job_train.csv
@@ -198,6 +193,7 @@ pip install pandas numpy scikit-learn tensorflow keras nltk matplotlib seaborn
 ---
 
 ### **2. Run Model Training**
+
 ```bash
 # For Job Train dataset
 jupyter notebook job_train.ipynb
@@ -208,7 +204,8 @@ jupyter notebook real_fake_job_posting.ipynb
 
 ---
 
-### **3. Launch Flask Web Application**
+### **3️⃣ Launch Flask Web Application**
+
 ```bash
 python app.py
 # Access the app at http://localhost:5000
@@ -216,8 +213,10 @@ python app.py
 
 ---
 
-### **4. Model Files**
+### **4️⃣ Model Files**
+
 Pre-trained models are stored as:
+
 - `.pkl` → Machine Learning models  
 - `.h5` → Artificial Neural Network (ANN) models  
 
@@ -230,7 +229,3 @@ Pre-trained models are stored as:
 3. **TensorFlow Keras API**  
 4. **Bird, Klein & Loper (2009)** – *Natural Language Processing with Python*  
 5. **Zhang & Wallace (2015)** – *CNN Sensitivity Analysis for Sentence Classification*
-````
-
----
-
