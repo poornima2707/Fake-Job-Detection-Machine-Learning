@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JobGuard - AI Fake Job Detector</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="enhanced-features.css">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/enhanced-features.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -523,7 +523,7 @@
             document.getElementById(tabName + '-tab').classList.remove('hidden');
 
             // Add active class to clicked button
-            event.target.classList.add('active');
+            event.currentTarget.classList.add('active');
 
             // Load insights data if insights tab is selected
             if (tabName === 'insights') {
@@ -534,9 +534,16 @@
         async function loadInsights() {
             try {
                 const response = await fetch('/insights');
+                if (!response.ok) {
+                    throw new Error('Failed to fetch insights');
+                }
                 const data = await response.json();
                 const tbody = document.getElementById('insights-body');
                 tbody.innerHTML = '';
+
+                if (data.error) {
+                    throw new Error(data.error);
+                }
 
                 if (data.length === 0) {
                     tbody.innerHTML = '<tr><td colspan="6" style="text-align: center; padding: 2rem;">No data available</td></tr>';
@@ -546,7 +553,7 @@
                 data.forEach(row => {
                     const tr = document.createElement('tr');
                     tr.innerHTML = `
-                        <td>${row.Model}</td>
+                        <td>${row.Model || 'N/A'}</td>
                         <td>${(row.Accuracy * 100).toFixed(1)}%</td>
                         <td>${(row.Precision * 100).toFixed(1)}%</td>
                         <td>${(row.Recall * 100).toFixed(1)}%</td>
@@ -587,7 +594,17 @@
                     },
                     body: JSON.stringify(data),
                 });
+
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(errorData.error || 'Prediction failed');
+                }
+
                 const result = await response.json();
+
+                if (result.error) {
+                    throw new Error(result.error);
+                }
 
                 document.getElementById('prediction').textContent = result.prediction;
                 document.getElementById('confidence').textContent = (result.confidence * 100).toFixed(1) + '%';
@@ -614,7 +631,7 @@
                 document.getElementById('result').scrollIntoView({ behavior: 'smooth' });
             } catch (error) {
                 console.error('Error:', error);
-                showToast('An error occurred while processing your request.', true);
+                showToast('Error: ' + error.message, true);
             } finally {
                 submitBtn.innerHTML = '<i class="fas fa-wand-magic-sparkles"></i> <span>Analyze Job Posting</span>';
                 submitBtn.disabled = false;
