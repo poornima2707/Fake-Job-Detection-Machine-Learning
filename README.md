@@ -224,8 +224,10 @@ Pre-trained models are stored as:
 
 ## 📚 References
 
-1. **Kaggle Dataset** – *Real or Fake Job Posting Prediction*  
-2. **Scikit-learn Documentation**  
-3. **TensorFlow Keras API**  
-4. **Bird, Klein & Loper (2009)** – *Natural Language Processing with Python*  
-5. **Zhang & Wallace (2015)** – *CNN Sensitivity Analysis for Sentence Classification*
+## References
+1. Kaggle Dataset: "Real or Fake Job Posting Prediction" - https://www.kaggle.com/shivamb/real-or-fake-fake-jobposting-prediction
+2. Pedregosa, F. et al. (2011). Scikit-learn: Machine Learning in Python. Journal of Machine Learning Research, 12, 2825-2830.
+3. Chollet, F. (2015). Keras. https://keras.io
+4. Bird, S., Klein, E., & Loper, E. (2009). Natural Language Processing with Python. O'Reilly Media.
+5. Zhang, Y., & Wallace, B. (2015). A sensitivity analysis of (and practitioners' guide to) convolutional neural networks for sentence classification. arXiv preprint arXiv:1510.03820.
+6. Joachims, T. (1998). Text categorization with support vector machines: Learning with many relevant features. European Conference on Machine Learning, 137-142.
